@@ -1,0 +1,13 @@
+extend ../layout
+block title
+    title 主页
+block content
+    .container
+        .row
+            .content-wrap.clearfix
+                .col-sm-12.col-md-3.content-left.hidden-xs.hidden-sm.sidebar
+                    each item in books
+                        div(id="#{item._id}").panel-title 
+                            span.panel-text #{item.name}
+                .col-sm-12.col-md-9.content-main#read
+

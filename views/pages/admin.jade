@@ -1,0 +1,29 @@
+extend ../layout
+block title
+    title 后台管理
+block content
+
+    .container
+        .row
+            .col-sm-3.col-md-3.padding-clear
+                ul.list-group
+                    li.list-group-item.new-article 
+                        a(href="/admin/edit") 新建文章
+                    li#booklist.list-group-item 作品分类
+                        span.book_btn
+                            a#savebook(href="#",style="display:none;") 保存 |
+                            a#cancleadd(href="#",style="display:none;")  取消
+                    each book in books
+                        li.list-group-item.bookitem(id="#{book._id}") #{book.name}
+                    li#addbook.list-group-item 添加分类
+
+            .col-sm-9.col-md-9.padding-clear
+                table.table.table-bordered.table-hover.table-condensed#article_list
+                    thead
+                        tr
+                            th(width="50%") 标题
+                            th(align="center") 所属分类              
+                            th 发布时间
+                            th(colspan="2",align="center") 状态
+                            th(colspan="3",align="center") 操作
+                    tbody.list 

@@ -1,0 +1,163 @@
+.header {
+    text-align: center;
+    padding-top: 42px;
+    background: #f4645f;
+}
+.container {
+    width:990px!important;
+    height:auto;
+}
+
+.content-wrap {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+}
+
+.content-main {
+    padding: 0 0 20px;
+    border-left: 1px solid #e6e6e6;
+
+}
+
+.sidebar {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+}
+
+.padding-clear{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+table{
+
+    margin-top: 30px;
+}
+.delete:hover,
+.publish:hover,
+.updatestyle:hover,
+.savebook:hover{
+    cursor:pointer;
+    background-color: gray;
+    color:red;
+}
+
+/*admin page*/
+/* addbook button*/
+.savestyle{
+    background-color: #dda;
+}
+.addbook{
+    background-color: #fdd;
+    color: black;
+}
+
+input{ /*可输入区域样式*/
+    padding:1px 3px 1px 3px;
+    margin:0px;
+    border:none; /* 输入框不要边框 */
+    font-family:Arial;
+} 
+.list-group{ 
+    margin-top: 30px;
+    width: 80%;
+}
+
+.hide{
+    display: none;
+}
+
+span.book_btn{
+    float: right;
+}
+
+.nb{
+    background-color: #ffd;
+}
+.dropdown-menu li{
+    border-bottom: 1px;
+    cursor:pointer;
+}
+.dropdown-menu li:hover{
+    background-color: #ffd;
+}
+.editable{
+    background-color: #ffd;
+}
+
+/* Article List */
+.article_item:hover,
+.article_update:hover,
+.article_create:hover,
+.article_shared:hover,
+.article_delete:hover,
+#addbook:hover,
+.bookitem:hover,
+.new-article:hover
+{
+    cursor: pointer;
+    color: red;
+}
+
+.panel-title{
+    margin-bottom: -1px;
+    background-color: #e6e6e6;
+    border-top: 1px solid #ddd;
+
+}
+.panel-title span{
+    width: 100%;
+    padding-left: 10px;
+}
+.panel-list{
+    width: 100%;
+    background-color: white;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding-left: 0px;
+
+}
+.panel-title .article_list:hover{
+    cursor: pointer;
+    color: red;
+}
+.panel-title .article_list{
+
+    padding: 5px 10px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    list-style-type:none;
+}
+
+#read{
+    padding-left: 40px; 
+}
+.bselected{
+    background-color: #e6e6e6;
+}
+#booklist,#addbook,#booklist a{
+    background-color: blue;
+    color: white;
+}
+
+.hide{
+    display: none;
+}
+/*
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+*/

@@ -1,0 +1,60 @@
+doctype html
+html(lang='zh')
+    head
+        title 后台录入
+        meta(charset='UTF-8')
+        link(href="/libs/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+        link(href="/libs/css/style.css", rel="stylesheet")
+        link(rel='stylesheet', href='http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css')
+        link(rel='stylesheet', type='text/css', href='/libs/editor/css/wysiwyg-editor.css')
+        
+    body
+        if id
+            type(id="#{id}",class="update",style="display:none;")
+        .container.header
+        .container
+            .row
+                .col-sm-12.col-md-12.padding-clear
+                    #buttons
+                        a#save_pre(title="保存",href="#",data-toggle='modal', data-target='#myModal').btn.btn-default 发布文章
+                        a#toWechat.btn.btn-success 发布&&To微信
+
+                    textarea#editor(name='editor', placeholder='Type your text here...') 
+                        div #{article}
+                    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+                        .modal-dialog
+                            .modal-content
+                                .modal-header
+                                    button.close(type='button', data-dismiss='modal', aria-hidden='true')
+                                     | ×
+                                    h4#myModalLabel.modal-title
+                                     |  文章保存
+                                .modal-body
+                                    table.table 
+                                        tr
+                                            th 标题
+                                            td(id="title" contenteditable="true").editable
+                                        tr
+                                            th 选择分类
+                                            td.dropdown
+                                                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                                                    | 选择分类 
+                                                    b.caret
+                                                ul#ofbook.dropdown-menu
+                                        tr
+                                            th 是否分享到微信
+                                            td 
+                                                input(id="wx",type="checkbox") 
+
+                                .modal-footer
+                                    button.btn.btn-default(type='button', data-dismiss='modal')
+                                        | 关闭
+                                    button#save.btn.btn-primary(type='button')
+                                     | 保存
+
+        script(src="/libs/jquery/dist/jquery.min.js")
+        script(Src="/libs/bootstrap/dist/js/bootstrap.min.js")
+        script(type='text/javascript', src='/libs/editor/js/wysiwyg.js')
+        script(type='text/javascript', src='/libs/editor/js/wysiwyg-editor.js')
+        script(type='text/javascript', src='/libs/editor/js/crt_editor.js')
+        script(type='text/javascript', src='/libs/editor/js/action.js')
